@@ -22,7 +22,7 @@
 const ul = document.querySelectorAll("ul li"); // .list-group-item
 console.log(ul);
 
-ul[1].style.color = "green";
+ul[1].style.color = "red";
 
 //change the color for all even elements
 for (let i = 1; i < ul.length; i = i + 2) {
