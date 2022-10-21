@@ -52,3 +52,10 @@ newDiv.style.fontSize = "18px";
 newDiv.style.fontWeight = "bold";
 //adding element to DOM
 container.insertAdjacentElement("afterbegin", newDiv);
+
+//sharpener task add hello
+
+const div = document.createElement("div");
+div.appendChild(document.createTextNode("Hello Word...!"));
+
+list.insertAdjacentElement("beforebegin", div);
