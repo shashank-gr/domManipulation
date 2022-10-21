@@ -1,3 +1,5 @@
+//adding new list item and deleting them
+
 //selecting form
 const form = document.querySelector(".form-inline");
 //selecting ul
