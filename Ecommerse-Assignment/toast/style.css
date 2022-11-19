@@ -1,0 +1,33 @@
+* {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.btn {
+  background-color: orangered;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 3px;
+}
+#container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+.msg {
+  background-color: orangered;
+  color: white;
+  font-size: large;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 10px;
+}
