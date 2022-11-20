@@ -1,0 +1,28 @@
+* {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.img-container {
+  height: 500px;
+  width: 500px;
+  /* box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); */
+
+  overflow: hidden;
+}
+
+img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  transform-origin: center center;
+  transition: transform 0.3s linear;
+}
