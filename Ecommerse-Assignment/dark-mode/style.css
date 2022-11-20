@@ -1,0 +1,40 @@
+* {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: all 0.3s linear;
+}
+body.dark {
+  background-color: #1e1e1e;
+  color: white;
+}
+.toogle-container {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+}
+label {
+  user-select: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+input {
+  visibility: hidden;
+}
+h1 {
+  margin-bottom: 16px;
+}
+.content {
+  width: 800px;
+  line-height: 24px;
+}
