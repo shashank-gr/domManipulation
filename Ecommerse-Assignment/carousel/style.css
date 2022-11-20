@@ -1,0 +1,29 @@
+* {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.carousel {
+  height: 500px;
+  width: 500px;
+  overflow: hidden;
+}
+.img-container {
+  display: flex;
+  /* only transition the transform roperty */
+  transition: transform 0.3s linear;
+  transform: translateX(0);
+}
+
+img {
+  object-fit: contain;
+  height: 500px;
+  width: 500px;
+}
