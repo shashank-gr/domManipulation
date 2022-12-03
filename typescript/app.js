@@ -2,6 +2,7 @@
 const ip1 = document.querySelector(".num1");
 const ip2 = document.querySelector(".num2");
 const btn = document.querySelector("button"); // or use ! at the end if u are sure
+//array as generic type
 const numsArr = [];
 const stringArr = [];
 const add = (num1, num2) => {
@@ -29,6 +30,16 @@ btn.addEventListener("click", () => {
     result({ val: numSum, timeStamp: new Date() });
     console.log("nums arr", numsArr);
     console.log("string arr", stringArr);
+});
+//telling TS that promise is always going to resolve a sting value
+//hence we can use result.split which is string method
+const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Promise fullfilled");
+    }, 1000);
+});
+promise.then((result) => {
+    console.log(result.split(" "));
 });
 // npm install -g typescript
 // create app.ts

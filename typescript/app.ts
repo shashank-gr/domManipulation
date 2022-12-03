@@ -2,7 +2,8 @@ const ip1 = document.querySelector(".num1") as HTMLInputElement;
 const ip2 = document.querySelector(".num2") as HTMLInputElement;
 const btn = document.querySelector("button") as HTMLButtonElement; // or use ! at the end if u are sure
 
-const numsArr: number[] = [];
+//array as generic type
+const numsArr: Array<number> = [];
 const stringArr: string[] = [];
 
 //type define custom types
@@ -42,6 +43,17 @@ btn.addEventListener("click", () => {
   console.log("string arr", stringArr);
 });
 
+//telling TS that promise is always going to resolve a sting value
+//hence we can use result.split which is string method
+const promise = new Promise<string>((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Promise fullfilled");
+  }, 1000);
+});
+
+promise.then((result) => {
+  console.log(result.split(" "));
+});
 // npm install -g typescript
 // create app.ts
 // tsc app.ts  created a app.js from app.ts
