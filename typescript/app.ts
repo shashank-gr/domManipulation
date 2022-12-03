@@ -2,14 +2,22 @@ const ip1 = document.querySelector(".num1") as HTMLInputElement;
 const ip2 = document.querySelector(".num2") as HTMLInputElement;
 const btn = document.querySelector("button") as HTMLButtonElement; // or use ! at the end if u are sure
 
-const add = (num1: number, num2: number) => {
-  console.log(num1 + num2);
+const add = (num1: number | string, num2: number | string) => {
+  //union of 2 datatypes
+  if (typeof num1 === "number" && typeof num2 === "number") {
+    //need to use this to specify how the different datatypes will be used
+    return num1 + num2;
+  } else if (typeof num1 === "string" && typeof num2 === "string") {
+    return num1 + num2;
+  }
+  return +num1 + +num2;
 };
 btn.addEventListener("click", () => {
-  add(+ip1.value, +ip2.value);
+  const numSum = add(+ip1.value, +ip2.value);
+  console.log("numbers sum", numSum);
+  const stringConcat = add(ip1.value, ip2.value);
+  console.log("string sum", stringConcat);
 });
-
-export {};
 
 // npm install -g typescript
 // create app.ts
