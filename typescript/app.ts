@@ -5,7 +5,15 @@ const btn = document.querySelector("button") as HTMLButtonElement; // or use ! a
 const numsArr: number[] = [];
 const stringArr: string[] = [];
 
-const add = (num1: number | string, num2: number | string) => {
+//type define custom types
+type NumberOrString = number | string;
+//to define interface i.e how object or class has look like
+interface obj {
+  val: number;
+  timeStamp: Date;
+}
+
+const add = (num1: NumberOrString, num2: NumberOrString) => {
   //union of 2 datatypes
   if (typeof num1 === "number" && typeof num2 === "number") {
     //need to use this to specify how the different datatypes will be used
@@ -17,7 +25,7 @@ const add = (num1: number | string, num2: number | string) => {
 };
 
 //usage of Objects can define it is object and also the keys and there types
-function result(resultObj: { val: number; timeStamp: Date }) {
+function result(resultObj: obj) {
   console.log(`result ${resultObj.val} at ${resultObj.timeStamp}`);
 }
 
