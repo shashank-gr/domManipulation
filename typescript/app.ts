@@ -2,6 +2,9 @@ const ip1 = document.querySelector(".num1") as HTMLInputElement;
 const ip2 = document.querySelector(".num2") as HTMLInputElement;
 const btn = document.querySelector("button") as HTMLButtonElement; // or use ! at the end if u are sure
 
+const numsArr: number[] = [];
+const stringArr: string[] = [];
+
 const add = (num1: number | string, num2: number | string) => {
   //union of 2 datatypes
   if (typeof num1 === "number" && typeof num2 === "number") {
@@ -21,10 +24,14 @@ function result(resultObj: { val: number; timeStamp: Date }) {
 btn.addEventListener("click", () => {
   const numSum = add(+ip1.value, +ip2.value);
   console.log("numbers sum", numSum);
+  numsArr.push(numSum as number);
   const stringConcat = add(ip1.value, ip2.value);
   console.log("string sum", stringConcat);
-
+  stringArr.push(stringConcat as string);
   result({ val: numSum as number, timeStamp: new Date() });
+
+  console.log("nums arr", numsArr);
+  console.log("string arr", stringArr);
 });
 
 // npm install -g typescript
